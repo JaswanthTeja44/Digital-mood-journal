@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Mood Journal</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>📝 Digital Mood Journal JHTK</header>
+  <div class="container">
+    <form id="journal-form">
+      <label for="mood">Mood:</label>
+      <select id="mood" required>
+        <option value="">-- Select your mood --</option>
+        <option value="Happy">😊 Happy</option>
+        <option value="Sad">😢 Sad</option>
+        <option value="Angry">😠 Angry</option>
+        <option value="Excited">🤩 Excited</option>
+        <option value="Anxious">😰 Anxious</option>
+        <option value="Neutral">😐 Neutral</option>
+      </select>
+
+      <label for="note">Daily Note:</label>
+      <textarea id="note" rows="4" placeholder="Write something about your day..." required></textarea>
+
+      <button type="submit">Add Entry</button>
+    </form>
+
+    <div id="entries"></div>
+
+    <div class="chart-container">
+      <canvas id="moodChart"></canvas>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js">
+  </script>
+</body>
+</html>
